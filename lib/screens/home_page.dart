@@ -10,26 +10,28 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Header(),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 30.0),
-            child: Column(
-              children: [
-                CategoryCard(
-                  image: 'assets/images/cat-card1.png',
-                ),
-                CategoryCard(
-                  image: 'assets/images/cat-card2.png',
-                ),
-                CategoryCard(
-                  image: 'assets/images/cat-card3.png',
-                ),
-              ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Header(),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 30.0),
+              child: Column(
+                children: [
+                  CategoryCard(
+                    image: 'assets/images/cat-card1.png',
+                  ),
+                  CategoryCard(
+                    image: 'assets/images/cat-card2.png',
+                  ),
+                  CategoryCard(
+                    image: 'assets/images/cat-card3.png',
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
