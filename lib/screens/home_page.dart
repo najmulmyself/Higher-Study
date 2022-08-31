@@ -12,27 +12,33 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Header(),
+          // Header(),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 30.0),
-            child: Expanded(
-              child: CustomScrollView(
-                slivers: [
-                  Column(
-                    children: [
-                      CategoryCard(
-                        image: 'assets/images/cat-card1.png',
-                      ),
-                      CategoryCard(
-                        image: 'assets/images/cat-card2.png',
-                      ),
-                      CategoryCard(
-                        image: 'assets/images/cat-card3.png',
-                      ),
-                    ],
+            child: CustomScrollView(
+              slivers: [
+                SliverAppBar(
+                  leading: Header(),
+                ),
+                SliverToBoxAdapter(
+                  child: CategoryCard(
+                    image: 'assets/images/cat-card1.png',
                   ),
-                ],
-              ),
+                  // Column(
+                  //   children: [
+                  //     CategoryCard(
+                  //       image: 'assets/images/cat-card1.png',
+                  //     ),
+                  //     CategoryCard(
+                  //       image: 'assets/images/cat-card2.png',
+                  //     ),
+                  //     CategoryCard(
+                  //       image: 'assets/images/cat-card3.png',
+                  //     ),
+                  //   ],
+                  // ),
+                )
+              ],
             ),
           ),
         ],

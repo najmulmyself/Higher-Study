@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, unused_import
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,8 +16,10 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: Scaffold(
-        body: HomePage(),
+      home: SafeArea(
+        child: Scaffold(
+          body: HomePage(),
+        ),
       ),
     );
   }
