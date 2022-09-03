@@ -43,12 +43,6 @@ class CategoryCard extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              alignment: Alignment.bottomRight,
-              child: Text(
-                '126 Colleges',
-              ),
-            ),
           ],
         ),
       ],
