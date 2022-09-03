@@ -51,6 +51,11 @@ class Header extends StatelessWidget {
                 Stack(
                   alignment: Alignment.topRight,
                   children: [
+                    Icon(
+                      Icons.notification_important,
+                      color: Colors.white,
+                      size: 25,
+                    ),
                     Container(
                       height: 10,
                       width: 10,
@@ -58,11 +63,6 @@ class Header extends StatelessWidget {
                         color: Colors.red,
                         borderRadius: BorderRadius.circular(50),
                       ),
-                    ),
-                    Icon(
-                      Icons.notification_important,
-                      color: Colors.white,
-                      size: 25,
                     ),
                   ],
                 )
