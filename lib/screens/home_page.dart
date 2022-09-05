@@ -13,24 +13,26 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           Header(),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 30.0),
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.only(right: 30.0, left: 30, top: 30.0),
 
-            // child: CategoryCard(
-            //   image: 'assets/images/cat-card1.png',
-            // ),
-            child: Column(
-              children: [
-                CategoryCard(
-                  image: 'assets/images/cat-card1.png',
-                ),
-                CategoryCard(
-                  image: 'assets/images/cat-card2.png',
-                ),
-                CategoryCard(
-                  image: 'assets/images/cat-card3.png',
-                ),
-              ],
+              // child: CategoryCard(
+              //   image: 'assets/images/cat-card1.png',
+              // ),
+              child: ListView(
+                children: [
+                  CategoryCard(
+                    image: 'assets/images/cat-card1.png',
+                  ),
+                  CategoryCard(
+                    image: 'assets/images/cat-card2.png',
+                  ),
+                  CategoryCard(
+                    image: 'assets/images/cat-card3.png',
+                  ),
+                ],
+              ),
             ),
           )
         ],
