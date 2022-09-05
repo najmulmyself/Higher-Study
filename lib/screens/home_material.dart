@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:higher_study/component/cat_card.dart';
 import 'package:higher_study/component/header.dart';
+import 'package:higher_study/main.dart';
+import 'package:higher_study/screens/home_page.dart';
+import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
-class HomeMat extends StatelessWidget {
-  const HomeMat({
-    Key? key,
-  }) : super(key: key);
+class HomeMat extends StatefulWidget {
+  // HomeMat({required this.isCatActive});
 
+  @override
+  State<HomeMat> createState() => _HomeMatState();
+}
+
+class _HomeMatState extends State<HomeMat> {
+  bool isCatActive = false;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -24,14 +31,49 @@ class HomeMat extends StatelessWidget {
             child: ListView(
               // IF WE USE COLUMN HERE ERROR OCCURED
               children: [
-                CategoryCard(
-                  image: 'assets/images/cat-card1.png',
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      isCatActive = true;
+                    });
+                    showModalBottomSheet(
+                        context: context,
+                        useRootNavigator: true,
+                        builder: (context) {
+                          return Container(
+                            height: 200,
+                            color: Colors.amber,
+                            child: Center(
+                              child: Text(
+                                  'This is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdfThis is a modal!fsdjlkjsdalfsdmflsdf'),
+                            ),
+                          );
+                        });
+                  },
+                  child: CategoryCard(
+                    image: 'assets/images/cat-card1.png',
+                    title: 'Top Colleges',
+                    desc:
+                        'Search through thousands of accredited colleges and universities online to find the right one for you.  Apply in 3 min, and connect with your future.',
+                    sdes1: '+126',
+                    sdes2: 'Colleges',
+                  ),
                 ),
                 CategoryCard(
                   image: 'assets/images/cat-card2.png',
+                  title: 'Top Schools',
+                  desc:
+                      'Searching for the best school for you just got easier! With our Advanced School Search, you can easily filter out the schools that are fit for you.',
+                  sdes1: '+106',
+                  sdes2: 'Schools',
                 ),
                 CategoryCard(
                   image: 'assets/images/cat-card3.png',
+                  title: 'Exams',
+                  desc:
+                      'Find an end to end information about the exams that are happening in India',
+                  sdes1: '+16',
+                  sdes2: 'Exams',
                 ),
               ],
             ),

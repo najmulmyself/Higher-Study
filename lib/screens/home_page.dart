@@ -9,8 +9,8 @@ import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
+  HomePage({required this.isCatActive});
+  bool isCatActive;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

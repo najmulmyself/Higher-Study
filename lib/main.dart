@@ -21,12 +21,16 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       home: SafeArea(
         child: Scaffold(
-          // body: HomePage(), // NO NEED TO ADD HOMEPAGE | SCREEN WILL DO IT AUTOMATICALLY IN ORDER
+          body: HomePage(
+            isCatActive: false,
+          ), // NO NEED TO ADD HOMEPAGE | SCREEN WILL DO IT AUTOMATICALLY IN ORDER
           bottomNavigationBar: PersistentTabView(
             context,
             backgroundColor: Color(0xff0E3C6E),
             screens: [
-              HomePage(),
+              HomePage(
+                isCatActive: false,
+              ),
               Container(),
               Container(),
               Container(),

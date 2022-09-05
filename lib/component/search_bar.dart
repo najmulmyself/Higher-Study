@@ -13,7 +13,7 @@ class SearchBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          width: 270,
+          width: MediaQuery.of(context).size.width * 0.72,
           padding: EdgeInsets.symmetric(horizontal: 20),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
