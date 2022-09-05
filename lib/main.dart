@@ -3,6 +3,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:higher_study/screens/ano.dart';
+import 'package:higher_study/screens/container.dart';
 import 'package:higher_study/screens/home_page.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       home: SafeArea(
         child: Scaffold(
-          body: HomePage(),
+          // body: HomePage(),
           // body: PersistentTabView(
           //   context,
           //   screens: [HomePage(), Container()],
@@ -59,26 +61,35 @@ class MyApp extends StatelessWidget {
           //     ),
           //   ],
           // ),
-          // bottomNavigationBar: PersistentTabView(
-          //   context,
-          //   screens: [
-          //     HomePage(),
-          //   ],
-          //   items: [
-          //     PersistentBottomNavBarItem(
-          //       icon: Icon(CupertinoIcons.home),
-          //       title: "Home",
-          //       activeColorPrimary: CupertinoColors.activeBlue,
-          //       inactiveColorPrimary: CupertinoColors.systemGrey,
-          //     ),
-          //     PersistentBottomNavBarItem(
-          //       icon: Icon(CupertinoIcons.settings),
-          //       title: "Settings",
-          //       activeColorPrimary: CupertinoColors.activeBlue,
-          //       inactiveColorPrimary: CupertinoColors.systemGrey,
-          //     ),
-          //   ],
-          // ),
+          bottomNavigationBar: PersistentTabView(
+            context,
+            screens: [
+              HomePage(),
+              Con(),
+              ano(),
+            ],
+            items: [
+              PersistentBottomNavBarItem(
+                icon: Icon(CupertinoIcons.home),
+                title: "Home",
+                activeColorPrimary: CupertinoColors.activeBlue,
+                inactiveColorPrimary: CupertinoColors.systemGrey,
+              ),
+              PersistentBottomNavBarItem(
+                icon: Icon(CupertinoIcons.settings),
+                title: "Settings",
+                activeColorPrimary: CupertinoColors.activeBlue,
+                inactiveColorPrimary: CupertinoColors.systemGrey,
+              ),
+              PersistentBottomNavBarItem(
+                icon: Icon(CupertinoIcons.settings),
+                title: "Settings",
+                activeColorPrimary: CupertinoColors.activeBlue,
+                inactiveColorPrimary: CupertinoColors.systemGrey,
+              ),
+            ],
+            navBarStyle: NavBarStyle.style13,
+          ),
         ),
       ),
     );
