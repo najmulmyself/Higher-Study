@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:higher_study/component/college_card.dart';
 import 'package:higher_study/component/header.dart';
 import 'package:higher_study/component/search_bar.dart';
 
@@ -55,6 +56,16 @@ class CollegeList extends StatelessWidget {
                     ),
                     child: Text('MVSH Engineering College'),
                   ),
+                ],
+              ),
+            ),
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: ListView(
+                children: [
+                  CollegeCard(),
                 ],
               ),
             ),
