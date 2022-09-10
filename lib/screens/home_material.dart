@@ -2,12 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:higher_study/component/cat_card.dart';
-import 'package:higher_study/component/custom_radio_list.dart';
 import 'package:higher_study/component/header.dart';
-import 'package:higher_study/main.dart';
 import 'package:higher_study/modal/show_modal.dart';
-import 'package:higher_study/screens/home_page.dart';
-import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 class HomeMat extends StatefulWidget {
   // HomeMat({required this.isCatActive});

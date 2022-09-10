@@ -1,30 +1,53 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, use_key_in_widget_constructors
 
-class CustomRadioList extends StatelessWidget {
+import 'package:flutter/material.dart';
+import 'package:higher_study/screens/college_list_screen.dart';
+import 'package:higher_study/screens/dummy_screen.dart';
+
+class CustomRadioList extends StatefulWidget {
   CustomRadioList({
     required this.title,
     required this.icon,
   });
   final title;
   final icon;
+
+  @override
+  State<CustomRadioList> createState() => _CustomRadioListState();
+}
+
+class _CustomRadioListState extends State<CustomRadioList> {
   @override
   Widget build(BuildContext context) {
     return RadioListTile(
+      activeColor: Color(0xff0E3C6E),
       toggleable: true,
       controlAffinity: ListTileControlAffinity.trailing,
-      value: '',
-      groupValue: title,
-      title: Row(children: [
-        Icon(icon),
-        SizedBox(
-          width: 15,
+      value: 'Bachelor of Engineering',
+      groupValue: '',
+      title: GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => CollegeList(),
+            ),
+          );
+        },
+        child: Row(
+          children: [
+            Icon(widget.icon),
+            SizedBox(
+              width: 15,
+            ),
+            Text(widget.title!)
+          ],
         ),
-        Text(title!)
-      ]),
-      onChanged: (value) {
-        // setState(() {
-        //     gender = value.toString();
-        // });
+      ),
+      onChanged: (newValue) {
+        setState(() {
+          // value = newValue.toString();
+        });
       },
     );
   }
