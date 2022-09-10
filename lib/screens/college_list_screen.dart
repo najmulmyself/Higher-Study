@@ -62,9 +62,22 @@ class CollegeList extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 6),
               child: ListView(
                 children: [
+                  CollegeCard(),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  CollegeCard(),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  CollegeCard(),
+                  SizedBox(
+                    height: 20,
+                  ),
                   CollegeCard(),
                 ],
               ),
