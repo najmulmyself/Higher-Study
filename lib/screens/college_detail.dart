@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:higher_study/component/tab.dart';
 
 class CollegeDetails extends StatelessWidget {
   const CollegeDetails({Key? key}) : super(key: key);
@@ -100,7 +101,17 @@ class CollegeDetails extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ),
+            // TabBarView(
+            //   children: [
+            //     // Container(),
+            //     Icon(Icons.abc),
+            //     CircleAvatar(),
+            //   ],
+            // ),
+            // AppBar()
+
+            // TabS(),
           ],
         ),
       ),
