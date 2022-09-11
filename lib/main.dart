@@ -3,6 +3,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:higher_study/screens/college_list_screen.dart';
+import 'package:higher_study/screens/dummy_screen.dart';
 import 'package:higher_study/screens/home_page.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
@@ -31,12 +33,21 @@ class MyApp extends StatelessWidget {
               HomePage(
                 isCatActive: false,
               ),
-              Container(),
+              CollegeList(),
               Container(),
               Container(),
             ],
             items: [
               PersistentBottomNavBarItem(
+                routeAndNavigatorSettings: RouteAndNavigatorSettings(
+                  // initialRoute: '/',
+                  routes: {
+                    // '/': (context) => HomePage(
+                    //       isCatActive: false,
+                    //     ),
+                    '/collegeList': (context) => CollegeList(),
+                  },
+                ),
                 icon: Icon(CupertinoIcons.home),
                 title: "Home",
                 activeColorPrimary: CupertinoColors.white,
