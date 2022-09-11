@@ -37,12 +37,11 @@ class _CustomRadioListState extends State<CustomRadioList> {
           pushNewScreen(
             context,
             withNavBar: true,
+            screen: CollegeList(),
             // customPageRoute: MaterialPageRoute(
             //   builder: (context) => CollegeList(),
             // ),
 
-            screen: CollegeList(),
-  
             // settings: RouteSettings(name: '/collegeList'));
           );
         },

@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:higher_study/screens/college_detail.dart';
 
 class SingleCollegeCard extends StatelessWidget {
   const SingleCollegeCard({
@@ -12,7 +13,11 @@ class SingleCollegeCard extends StatelessWidget {
     return Stack(
       children: [
         GestureDetector(
-          onTap: (){},
+          onTap: () {
+            // Navigator.pushNamed(context, '/collegeDetails');
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => CollegeDetails()));
+          },
           child: Container(
             height: 270,
             decoration: BoxDecoration(

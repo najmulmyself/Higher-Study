@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:higher_study/screens/college_detail.dart';
 import 'package:higher_study/screens/college_list_screen.dart';
 import 'package:higher_study/screens/dummy_screen.dart';
 import 'package:higher_study/screens/home_page.dart';
@@ -39,15 +40,10 @@ class MyApp extends StatelessWidget {
             ],
             items: [
               PersistentBottomNavBarItem(
-                routeAndNavigatorSettings: RouteAndNavigatorSettings(
-                  // initialRoute: '/',
-                  routes: {
-                    // '/': (context) => HomePage(
-                    //       isCatActive: false,
-                    //     ),
-                    '/collegeList': (context) => CollegeList(),
-                  },
-                ),
+                // routeAndNavigatorSettings: RouteAndNavigatorSettings(
+                //   initialRoute: '/',
+
+                // ),
                 icon: Icon(CupertinoIcons.home),
                 title: "Home",
                 activeColorPrimary: CupertinoColors.white,
@@ -76,6 +72,13 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+      // routes: {
+      //   '/': (context) => HomePage(
+      //         isCatActive: false,
+      //       ),
+      //   '/collegeList': (context) => CollegeList(),
+      //   '/collegeDetails': (context) => CollegeDetails(),
+      // },
     );
   }
 }
