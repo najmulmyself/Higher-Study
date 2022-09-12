@@ -114,30 +114,7 @@ class _CollegeDetailsState extends State<CollegeDetails>
                 ],
               ),
             ),
-            // Container(
-            //   child: TabBar(
-            //     controller: _tabController,
-            //     tabs: [
-            //       Tab(
-            //         text: 'About',
-            //       ),
-            //       Tab(
-            //         text: 'Courses',
-            //       ),
-            //       Tab(
-            //         text: 'Reviews',
-            //       ),
-            //     ],
-            //   ),
-            // ),
-            // TabBarView(
-            //   controller: _tabController,
-            //   children: [
-            //     Text('About'),
-            //     Text('Courses'),
-            //     Text('Reviews'),
-            //   ],
-            // ),
+          
             Flexible(
               // has to be wrapped with flexible or expanded
               child: DefaultTabController(
@@ -183,33 +160,7 @@ class _CollegeDetailsState extends State<CollegeDetails>
               ),
             ),
 
-            // Expanded(
-            //   child: DefaultTabController(
-            //       length: 3,
-            //       child: Scaffold(
-            //         appBar: AppBar(
-            //           bottom: TabBar(tabs: [
-            //             Tab(
-            //               text: 'About',
-            //             ),
-            //             Tab(
-            //               text: 'Courses',
-            //             ),
-            //             Tab(
-            //               text: 'Reviews',
-            //             ),
-            //           ]),
-            //         ),
-            //         body: TabBarView(
-            //           controller: _tabController,
-            //           children: [
-            //             Text('About'),
-            //             Text('Courses'),
-            //             Text('Reviews'),
-            //           ],
-            //         ),
-            //       )),
-            // )
+          
           ],
         ),
       ),
