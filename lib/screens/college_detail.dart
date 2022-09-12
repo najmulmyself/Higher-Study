@@ -15,7 +15,7 @@ class _CollegeDetailsState extends State<CollegeDetails>
   void initState() {
     // TODO: implement initState
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 4, vsync: this);
   }
 
   @override
@@ -141,26 +141,30 @@ class _CollegeDetailsState extends State<CollegeDetails>
             Flexible(
               // has to be wrapped with flexible or expanded
               child: DefaultTabController(
-                length: 3,
+                length: 4,
                 child: Scaffold(
                   appBar: PreferredSize(
                     preferredSize: Size.fromHeight(50.0),
                     child: AppBar(
                       backgroundColor: Colors.white,
                       bottom: TabBar(
+                        padding: EdgeInsets.symmetric(horizontal: 20),
                         controller: _tabController,
-                        indicatorColor: Colors.green,
-                        labelColor: Colors.green,
+                        indicatorColor: Color(0xff0E3C6E),
+                        labelColor: Colors.black,
                         unselectedLabelColor: Colors.grey,
                         tabs: [
                           Tab(
-                            text: 'About',
+                            text: 'About College',
                           ),
                           Tab(
-                            text: 'Courses',
+                            text: 'Hostel facility',
                           ),
                           Tab(
-                            text: 'Reviews',
+                            text: 'Q & A',
+                          ),
+                          Tab(
+                            text: 'Events',
                           ),
                         ],
                       ),
@@ -172,6 +176,7 @@ class _CollegeDetailsState extends State<CollegeDetails>
                       Text('About'),
                       Text('Courses'),
                       Text('Reviews'),
+                      Text('Dummy'),
                     ],
                   ),
                 ),
