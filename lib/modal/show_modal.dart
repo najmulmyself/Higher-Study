@@ -9,7 +9,13 @@ Future<dynamic> showModal(BuildContext context) {
     context: context,
     useRootNavigator: true,
     builder: (context) {
-      return SizedBox(
+      return Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(30),
+            topRight: Radius.circular(30),
+          ),
+        ),
         // minHeight: 200,
         // height: 200,
         // color: Colors.amber,

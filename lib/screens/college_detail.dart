@@ -138,58 +138,43 @@ class _CollegeDetailsState extends State<CollegeDetails>
             //     Text('Reviews'),
             //   ],
             // ),
-            Expanded(
-              child: ListView(
-                children: [
-                  // Expanded(
-                  //   child: Column(children: [
-                  //     TabBar(
-                  //       controller: _tabController,
-                  //       tabs: [
-                  //         Tab(
-                  //           text: 'About',
-                  //         ),
-                  //         Tab(
-                  //           text: 'Courses',
-                  //         ),
-                  //         Tab(
-                  //           text: 'Reviews',
-                  //         ),
-                  //       ],
-                  //     ),
-                  //     TabBarView(
-                  //       controller: _tabController,
-                  //       children: [
-                  //         Text('About'),
-                  //         Text('Courses'),
-                  //         Text('Reviews'),
-                  //       ],
-                  //     )
-                  //   ]),
-                  // ),
-                  Text(
-                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
-                  Text(
-                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
-                  Text(
-                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
-                  Text(
-                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
-                  Text(
-                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
-                  Text(
-                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
-                  Text(
-                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
-                  Text(
-                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
-                  Text(
-                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
-                  Text(
-                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
-                  Text(
-                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
-                ],
+            Flexible(
+              // has to be wrapped with flexible or expanded
+              child: DefaultTabController(
+                length: 3,
+                child: Scaffold(
+                  appBar: PreferredSize(
+                    preferredSize: Size.fromHeight(50.0),
+                    child: AppBar(
+                      backgroundColor: Colors.white,
+                      bottom: TabBar(
+                        controller: _tabController,
+                        indicatorColor: Colors.green,
+                        labelColor: Colors.green,
+                        unselectedLabelColor: Colors.grey,
+                        tabs: [
+                          Tab(
+                            text: 'About',
+                          ),
+                          Tab(
+                            text: 'Courses',
+                          ),
+                          Tab(
+                            text: 'Reviews',
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  body: TabBarView(
+                    controller: _tabController,
+                    children: [
+                      Text('About'),
+                      Text('Courses'),
+                      Text('Reviews'),
+                    ],
+                  ),
+                ),
               ),
             )
           ],
