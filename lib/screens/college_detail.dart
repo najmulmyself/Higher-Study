@@ -3,8 +3,20 @@
 import 'package:flutter/material.dart';
 import 'package:higher_study/component/tab.dart';
 
-class CollegeDetails extends StatelessWidget {
-  const CollegeDetails({Key? key}) : super(key: key);
+class CollegeDetails extends StatefulWidget {
+  @override
+  State<CollegeDetails> createState() => _CollegeDetailsState();
+}
+
+class _CollegeDetailsState extends State<CollegeDetails>
+    with SingleTickerProviderStateMixin {
+  TabController? _tabController;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _tabController = TabController(length: 3, vsync: this);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -102,16 +114,84 @@ class CollegeDetails extends StatelessWidget {
                 ],
               ),
             ),
+            // Container(
+            //   child: TabBar(
+            //     controller: _tabController,
+            //     tabs: [
+            //       Tab(
+            //         text: 'About',
+            //       ),
+            //       Tab(
+            //         text: 'Courses',
+            //       ),
+            //       Tab(
+            //         text: 'Reviews',
+            //       ),
+            //     ],
+            //   ),
+            // ),
             // TabBarView(
+            //   controller: _tabController,
             //   children: [
-            //     // Container(),
-            //     Icon(Icons.abc),
-            //     CircleAvatar(),
+            //     Text('About'),
+            //     Text('Courses'),
+            //     Text('Reviews'),
             //   ],
             // ),
-            // AppBar()
-
-            // TabS(),
+            Expanded(
+              child: ListView(
+                children: [
+                  // Expanded(
+                  //   child: Column(children: [
+                  //     TabBar(
+                  //       controller: _tabController,
+                  //       tabs: [
+                  //         Tab(
+                  //           text: 'About',
+                  //         ),
+                  //         Tab(
+                  //           text: 'Courses',
+                  //         ),
+                  //         Tab(
+                  //           text: 'Reviews',
+                  //         ),
+                  //       ],
+                  //     ),
+                  //     TabBarView(
+                  //       controller: _tabController,
+                  //       children: [
+                  //         Text('About'),
+                  //         Text('Courses'),
+                  //         Text('Reviews'),
+                  //       ],
+                  //     )
+                  //   ]),
+                  // ),
+                  Text(
+                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
+                  Text(
+                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
+                  Text(
+                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
+                  Text(
+                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
+                  Text(
+                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
+                  Text(
+                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
+                  Text(
+                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
+                  Text(
+                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
+                  Text(
+                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
+                  Text(
+                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
+                  Text(
+                      'lorem1fasrfsdfsdafklklofihjkhfhsdlafjfkofhsafkjlaflafkjfafoijweraihlafo00'),
+                ],
+              ),
+            )
           ],
         ),
       ),
