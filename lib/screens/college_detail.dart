@@ -114,7 +114,6 @@ class _CollegeDetailsState extends State<CollegeDetails>
                 ],
               ),
             ),
-          
             Flexible(
               // has to be wrapped with flexible or expanded
               child: DefaultTabController(
@@ -147,6 +146,7 @@ class _CollegeDetailsState extends State<CollegeDetails>
                       ),
                     ),
                   ),
+                  // need to update the tabbar
                   body: TabBarView(
                     controller: _tabController,
                     children: [
@@ -159,8 +159,6 @@ class _CollegeDetailsState extends State<CollegeDetails>
                 ),
               ),
             ),
-
-          
           ],
         ),
       ),
