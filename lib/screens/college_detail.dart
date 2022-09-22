@@ -146,7 +146,7 @@ class _CollegeDetailsState extends State<CollegeDetails>
                       ),
                     ),
                   ),
-                  // need to update the tabbar | ready content
+                  // need to update the tabbar | ready content | need to update tab bar section into the ready content section
                   body: TabBarView(
                     controller: _tabController,
                     children: [
