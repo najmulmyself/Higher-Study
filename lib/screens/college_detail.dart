@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:higher_study/component/tab.dart';
+import 'package:higher_study/screens/dummy_screen.dart';
 
 class CollegeDetails extends StatefulWidget {
   @override
@@ -219,7 +220,12 @@ class _CollegeDetailsState extends State<CollegeDetails>
                     padding:
                         EdgeInsets.symmetric(horizontal: 100, vertical: 20),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DummyW()),
+                    );
+                  },
                   child: Text('Apply Now'),
                 ),
               ),
